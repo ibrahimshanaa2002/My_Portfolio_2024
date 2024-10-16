@@ -4,10 +4,7 @@ const nextConfig = {
   swcMinify: true,
 };
 
-// Import next-videos
-const withVideos = require("next-videos");
+module.exports = nextConfig;
 
-// Combine both configurations
-module.exports = withVideos({
-  ...nextConfig, // Spread the existing Next.js config
-});
+const withVideos = require("next-videos");
+module.exports = withVideos();
