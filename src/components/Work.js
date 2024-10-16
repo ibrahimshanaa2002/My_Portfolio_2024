@@ -28,26 +28,6 @@ const workData = [
     technologies: ["AngularJS - ", "typescript - ", "CSS"],
      preview: "https://ibrahimshanaa2002.github.io/my_Dashboard/",
   },
-  {
-    img: "img/projects/project-3.jpg",
-    name: "Color Generator website",
-    format: "img",
-    project: "WEBSITE",
-    client: "Internship",
-    duration: "1 Day",
-    technologies: ["HTML - ", "CSS - ", "javascript"],
-     preview: "https://ibrahimshanaa2002.github.io/CodeAlpha_BackgroundGenerator/",
-  },
-  {
-    img: "img/projects/project-4.jpg",
-    name: "Temperature Converter website",
-    format: "img",
-    project: "WEBSITE",
-    client: "Internship",
-    duration: "1 Day",
-    technologies: ["HTML - ", "CSS - ", "javascript"],
-     preview: "https://ibrahimshanaa2002.github.io/CodeAlpha_TempertureConverter/",
-  },
 ];
 
 const Work = () => {
