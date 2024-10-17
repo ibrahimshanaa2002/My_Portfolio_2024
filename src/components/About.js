@@ -61,7 +61,7 @@ const About = () => {
                 </li>
                 <li>
                   <h6>
-                    <span className="font-weight-600">Experience</span>2 year
+                    <span className="font-weight-600">Experience</span>2 years
                   </h6>
                 </li>
                 <li>
@@ -83,7 +83,7 @@ const About = () => {
                 <li>
                   <h6>
                     <span className="font-weight-600">Languages</span>
-                    Arabic, English
+                    Arabic, English, French
                   </h6>
                 </li>
                 <li>
@@ -160,43 +160,35 @@ const About = () => {
                       </span>
                     </div>
                     <div className="card-body text-justify">
-                      <p>
-                        Implemented acquired skills by collaborating with a team
-                        on a dynamic dashboard project using the Angular
-                        framework. Contributed to the development of an
-                        interactive and efficient dashboard, showcasing
-                        practical application of HTML, TypeScript, CSS, and
-                        Angular expertise.
-                      </p>
+                      <ul className="list-disc text-white">
+                        <li className="mb-4">
+                          <strong>• Website Development:</strong> Designed and
+                          developed websites using WordPress, ensuring
+                          responsive design and optimal user experience.
+                        </li>
+                        <li className="mb-4">
+                          <strong>• UI/UX Design:</strong> Created intuitive user
+                          interfaces and user experiences using Figma, enhancing
+                          usability and aesthetic appeal.
+                        </li>
+                        <li className="mb-4">
+                          <strong>• Software Development Approaches:</strong>{" "}
+                          Contributed to planning and implementing software
+                          development methodologies, focusing on efficiency and
+                          project scalability.
+                        </li>
+                        <li className="mb-4">
+                          <strong>• Debugging and Maintenance:</strong> Identified
+                          and resolved website issues, improving functionality
+                          and user satisfaction.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
+
                 {/* Item Ends */}
                 {/* Item Starts */}
-                <div className="item">
-                  <span className="bullet" />
-                  <div className="card">
-                    <div className="card-header">
-                      <span className="year">
-                        <i className="fa fa-calendar" />
-                        <i className="fa fa-caret-right" />
-                        Sep 2023 - Oct 2023 · 2 mos
-                      </span>
-                      <span className="d-block font-weight-400 uppercase">
-                        Frontend Web Developer
-                        <span className="separator" />
-                        <span className="font-weight-700">Code Alpha</span>
-                      </span>
-                    </div>
-                    <div className="card-body text-justify">
-                      <p>
-                        During my internship in front-end development, I honed
-                        my skills in HTML, CSS, Bootstrap, and JavaScript while
-                        actively utilizing GitHub for version control.
-                      </p>
-                    </div>
-                  </div>
-                </div>
                 <div className="item">
                   <span className="bullet" />
                   <div className="card">
@@ -207,7 +199,7 @@ const About = () => {
                         May 2024 - Present
                       </span>
                       <span className="d-block font-weight-400 uppercase">
-                        Wordpress Developer
+                        Web Developer & Designer
                         <span className="separator" />
                         <span className="font-weight-700">
                           Independent Contractor
@@ -215,12 +207,29 @@ const About = () => {
                       </span>
                     </div>
                     <div className="card-body text-justify">
-                      <p>
-                        I develop and customize WordPress websites, focusing on
-                        theme development, plugin integration, and responsive
-                        design. My work ensures optimized performance and a
-                        seamless user experience, tailored to meet client needs.
-                      </p>
+                      <ul className="list-disc text-white">
+                        <li className="mb-4">
+                          <strong>• Website Development:</strong> Designed and
+                          developed websites using WordPress, ensuring
+                          responsive design and optimal user experience.
+                        </li>
+                        <li className="mb-4">
+                          <strong>• UI/UX Design:</strong> Created intuitive
+                          user interfaces and user experiences using Figma,
+                          enhancing usability and aesthetic appeal.
+                        </li>
+                        <li className="mb-4">
+                          <strong>• Software Development Approaches:</strong>{" "}
+                          Contributed to planning and implementing software
+                          development methodologies, focusing on efficiency and
+                          project scalability.
+                        </li>
+                        <li className="mb-4">
+                          <strong>• Debugging and Maintenance:</strong>{" "}
+                          Identified and resolved website issues, improving
+                          functionality and user satisfaction.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -434,6 +443,54 @@ const About = () => {
             {/* Skill Bar Starts */}
             <div className="col-12 col-sm-6 col-md-4">
               <span className="skill-text">MySQL</span>
+              <div className="chart-bar">
+                <span
+                  className="item-progress"
+                  data-percent={75}
+                  style={{ width: "75%" }}
+                />
+                <span className="percent" style={{ right: "calc(25% - 21px)" }}>
+                  75%
+                  <b className="arrow" />
+                </span>
+              </div>
+            </div>
+            {/* Skill Bar Ends */}
+            {/* Skill Bar Starts */}
+            <div className="col-12 col-sm-6 col-md-4">
+              <span className="skill-text">NodeJs</span>
+              <div className="chart-bar">
+                <span
+                  className="item-progress"
+                  data-percent={85}
+                  style={{ width: "85%" }}
+                />
+                <span className="percent" style={{ right: "calc(15% - 21px)" }}>
+                  85%
+                  <b className="arrow" />
+                </span>
+              </div>
+            </div>
+            {/* Skill Bar Ends */}
+              {/* Skill Bar Starts */}
+              <div className="col-12 col-sm-6 col-md-4">
+              <span className="skill-text">Figma</span>
+              <div className="chart-bar">
+                <span
+                  className="item-progress"
+                  data-percent={65}
+                  style={{ width: "65%" }}
+                />
+                <span className="percent" style={{ right: "calc(35% - 21px)" }}>
+                  65%
+                  <b className="arrow" />
+                </span>
+              </div>
+            </div>
+            {/* Skill Bar Ends */}
+             {/* Skill Bar Starts */}
+             <div className="col-12 col-sm-6 col-md-4">
+              <span className="skill-text">photoshop</span>
               <div className="chart-bar">
                 <span
                   className="item-progress"
