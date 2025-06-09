@@ -18,7 +18,7 @@ const IndexVideoDark = () => {
     <Layouts bodyCls={"dark bgvideo"}>
       {/* Back To Home Ends [ONLY MOBILE] */}
       {/* Home Section Starts */}
-      <Home leftImg leftImgSrc="img/videodark.jpg" video />
+      <Home leftImg leftImgSrc="/img/videodark.jpg" video />
       {/* Home Section Ends */}
       {/* About Section Starts */}
       <About />

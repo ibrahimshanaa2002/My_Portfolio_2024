@@ -4,12 +4,12 @@ import ColorContext from "../context/colorContext";
 const colors = [
   { name: "blue", colorImg: "img/styleswitcher/blue.png" },
   { name: "red", colorImg: "img/styleswitcher/red.png" },
-  { name: "goldrenrod", colorImg: "img/styleswitcher/goldenrod.png" },
-  { name: "magenta", colorImg: "img/styleswitcher/magenta.png" },
-  { name: "yellowgreen", colorImg: "img/styleswitcher/yellowgreen.png" },
   { name: "orange", colorImg: "img/styleswitcher/orange.png" },
+  { name: "magenta", colorImg: "img/styleswitcher/magenta.png" },
   { name: "green", colorImg: "img/styleswitcher/green.png" },
   { name: "yellow", colorImg: "img/styleswitcher/yellow.png" },
+
+  { name: "yellowgreen", colorImg: "img/styleswitcher/yellowgreen.png" },
 ];
 
 const Switcher = () => {

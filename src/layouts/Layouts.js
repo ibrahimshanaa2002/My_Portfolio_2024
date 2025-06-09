@@ -13,7 +13,7 @@ const Layouts = ({ children, bodyCls, extraPage, light }) => {
       ? bodyCls
       : "dark fullscreendark";
   }, []);
-  const { changeMobileMenu, mobileMenu } = useContext(NavContext);
+  const { changeMobileMenu, mobileMenu, isTransitioning } = useContext(NavContext);
   const { color } = useContext(ColorContext);
   const { width } = useWindowSize();
   useEffect(() => {
@@ -24,12 +24,6 @@ const Layouts = ({ children, bodyCls, extraPage, light }) => {
   return (
     <Fragment>
       <Head>
-        <link
-          type="text/css"
-          media="all"
-          href={`css/skins/${color}.css`}
-          rel="stylesheet"
-        />{" "}
         <title>Ibrahim - Personal Portfolio</title>
       </Head>
       <div className="page animated" style={{ animationDuration: "500ms" }}>
@@ -42,7 +36,7 @@ const Layouts = ({ children, bodyCls, extraPage, light }) => {
         ) : (
           <main
             id="main"
-            className={`${width < 1025 ? (mobileMenu ? "open" : "") : ""}`}
+            className={`${width < 1025 ? (mobileMenu ? "open" : "") : ""} ${isTransitioning ? "animating" : ""}`}
           >
             {/* Back To Home Starts [ONLY MOBILE] */}
             <BackMobile

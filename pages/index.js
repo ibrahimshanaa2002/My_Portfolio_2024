@@ -12,13 +12,17 @@ const Work = dynamic(() => import("../src/components/Work"), {
 const IndexVideoDark = () => {
   const { changeColor } = useContext(ColorContext);
   useEffect(() => {
-    changeColor("orange");
+    // Only set to orange if no color preference is saved
+    const savedColor = localStorage.getItem('selectedColor');
+    if (!savedColor) {
+      changeColor("orange");
+    }
   }, []);
   return (
     <Layouts bodyCls={"dark bgvideo"}>
       {/* Back To Home Ends [ONLY MOBILE] */}
       {/* Home Section Starts */}
-      <Home leftImg leftImgSrc="img/videodark.jpg" video />
+      <Home leftImg leftImgSrc="/img/videodark.jpg" video />
       {/* Home Section Ends */}
       {/* About Section Starts */}
       <About />
