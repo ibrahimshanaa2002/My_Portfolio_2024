@@ -43,29 +43,53 @@ const NavState = (props) => {
       payload: value,
     });
   };
-  const changeMobileMenu = (value) => {
-    // Debounce menu transitions to prevent recoil effects
-    if (state.isTransitioning) return;
+  const changeMobileMenu = (value, priority = false) => {
+    // Skip debounce for priority actions or if we're closing the menu (back button)
+    if (!priority && state.isTransitioning && value !== false) return;
     
-    // Set transitioning state
+    // For priority or back actions, force immediate state reset
+    if (priority || value === false) {
+      // For back button/closing actions, we want to ensure it always works
+      dispatch({
+        type: type.MOBILE_MENU,
+        payload: value,
+      });
+      
+      // Use a shorter transition time for back button to feel more responsive
+      const transitionTime = value === false ? 300 : 400;
+      
+      dispatch({
+        type: type.TRANSITIONING,
+        payload: true,
+      });
+      
+      setTimeout(() => {
+        dispatch({
+          type: type.TRANSITIONING,
+          payload: false,
+        });
+      }, transitionTime);
+      
+      return;
+    }
+    
+    // Normal transition (non-priority, non-back)
     dispatch({
       type: type.TRANSITIONING,
       payload: true,
     });
     
-    // Change the mobile menu state
     dispatch({
       type: type.MOBILE_MENU,
       payload: value,
     });
     
-    // Reset transitioning state after animation completes
     setTimeout(() => {
       dispatch({
         type: type.TRANSITIONING,
         payload: false,
       });
-    }, 400); // Match this with the CSS transition duration
+    }, 400);
   };
   return (
     <NavContext.Provider
